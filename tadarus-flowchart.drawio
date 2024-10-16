@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1834" dy="1144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1197" dy="813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -303,7 +303,7 @@
         <mxCell id="tednkzromvAoGtRD-79L-13" value="system display fasting replacement days&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-330" y="400" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tednkzromvAoGtRD-79L-17" value="nextjs&lt;div&gt;ui: shadcn neobrutalism&lt;br&gt;&lt;div&gt;orm: drizzle&lt;/div&gt;&lt;div&gt;tanstack query&lt;/div&gt;&lt;div&gt;font: bricolage grotesque&lt;/div&gt;&lt;div&gt;auth: clerk&lt;/div&gt;&lt;div&gt;notification: aws ses&lt;/div&gt;&lt;div&gt;db: tba&lt;/div&gt;&lt;div&gt;assets: lottie&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="tednkzromvAoGtRD-79L-17" value="nextjs&lt;div&gt;ui: shadcn neobrutalism&lt;br&gt;&lt;div&gt;orm: drizzle&lt;/div&gt;&lt;div&gt;tanstack query&lt;/div&gt;&lt;div&gt;font: bricolage grotesque&lt;/div&gt;&lt;div&gt;auth: clerk&lt;/div&gt;&lt;div&gt;notification: aws ses&lt;/div&gt;&lt;div&gt;db: tba&lt;/div&gt;&lt;div&gt;assets: lottie&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="150" y="-370" width="170" height="180" as="geometry" />
         </mxCell>
         <mxCell id="4S38YXzbnO1wxV-RA2Jo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4S38YXzbnO1wxV-RA2Jo-0" target="CRsF88WKp_3KR7oHD52K-56">
