@@ -104,6 +104,7 @@ export default function OnboardingComponent() {
 
     return (
         <div className="dark:bg-secondaryBlack inset-0 flex min-h-screen w-full flex-col bg-white bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px]">
+            {error && <div className="text-red-500">{error}</div>} 
             <div className="mx-auto w-container max-w-full my-auto">
                 <Card className="w-[350px]">
                     <CardHeader className='text-center'>
