@@ -27,7 +27,7 @@ export default function Header() {
                     className="h-12 text-base font-heading md:text-lg lg:h-14 lg:text-xl"
                     onClick={() => router.push('/dashboard')}
                 >
-                    Get started
+                    get started
                 </Button>
             </div>
         </header>
