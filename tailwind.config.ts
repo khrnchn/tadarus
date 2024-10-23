@@ -83,6 +83,9 @@ const config: Config = {
         base: "500",
         heading: "700",
       },
+      fontFamily: {
+        sans: ["var(--font-bricolage)"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
