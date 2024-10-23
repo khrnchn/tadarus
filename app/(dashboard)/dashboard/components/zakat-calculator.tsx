@@ -1,15 +1,22 @@
 "use client"
 
-import { useState } from "react"
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CalendarIcon } from "lucide-react"
+import { useState } from "react"
 
-// This data is simplified. In a real application, you'd want to fetch this from an API or database.
-const zakatRates = {
+type RiceTypes = "Beras Super" | "Beras Biasa"
+type States = "Selangor" | "Perak"
+type ZakatRates = {
+  [key in States]: {
+    [key in RiceTypes]: number
+  }
+}
+
+const zakatRates: ZakatRates = {
   Selangor: { "Beras Super": 7, "Beras Biasa": 5 },
   Perak: { "Beras Super": 6.5, "Beras Biasa": 4.5 },
 }
@@ -22,9 +29,28 @@ export default function ZakatCalculator() {
   const [totalZakat, setTotalZakat] = useState(0)
 
   const calculateZakat = () => {
-    if (state && riceType && pax) {
-      const rate = zakatRates[state][riceType]
+    if (!state || !riceType || !pax) {
+      // Handle incomplete input
+      return
+    }
+
+    try {
+      const stateRates = zakatRates[state as States]
+      if (!stateRates) {
+        throw new Error(`Invalid state: ${state}`)
+      }
+
+      const rate = stateRates[riceType as RiceTypes]
+      if (typeof rate !== 'number') {
+        throw new Error(`Invalid rice type: ${riceType}`)
+      }
+
       setTotalZakat(rate * pax)
+    } catch (error) {
+      // Handle the error appropriately
+      console.error('Error calculating zakat:', error)
+      // Maybe set an error state to show to the user
+      setTotalZakat(0)
     }
   }
 
