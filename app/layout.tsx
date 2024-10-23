@@ -3,15 +3,16 @@ import {
 } from '@clerk/nextjs';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import FloatingNav from '../components/floating-nav';
-import { bricolage } from './fonts';
 import "./globals.css";
+import FloatingNav from '@/components/floating-nav';
+import { bricolage } from './fonts';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -30,12 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={bricolage.className}>
+      <html lang="en" >
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bricolage-grotesque`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           {children}
-          <FloatingNav />
         </body>
       </html>
     </ClerkProvider>
