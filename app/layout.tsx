@@ -3,6 +3,8 @@ import {
 } from '@clerk/nextjs';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import FloatingNav from '../components/floating-nav';
+import { bricolage } from './fonts';
 import "./globals.css";
 
 const geistSans = localFont({
@@ -28,11 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className={bricolage.className}>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bricolage-grotesque`}
         >
           {children}
+          <FloatingNav />
         </body>
       </html>
     </ClerkProvider>
