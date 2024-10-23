@@ -1,12 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
-import { CalendarIcon, MoonIcon } from "lucide-react"
+import { Switch } from "@/components/ui/switch"
+import { MoonIcon } from "lucide-react"
+import { useEffect, useState } from "react"
 
 type DayStatus = {
   date: Date
@@ -25,11 +25,21 @@ export default function FastingTracker() {
 
   useEffect(() => {
     const days: DayStatus[] = []
-    for (let d = new Date(ramadanStart); d <= ramadanEnd; d.setDate(d.getDate() + 1)) {
-      days.push({ date: new Date(d), fasted: false })
+    const endTime = ramadanEnd.getTime()
+
+    for (
+      let currentDate = new Date(ramadanStart);
+      currentDate.getTime() <= endTime;
+      currentDate = new Date(currentDate.setDate(currentDate.getDate() + 1))
+    ) {
+      days.push({
+        date: new Date(currentDate),
+        fasted: false
+      })
     }
+
     setDaysStatus(days)
-  }, [])
+  }, [ramadanStart, ramadanEnd])
 
   const toggleFasted = (date: Date) => {
     setDaysStatus(prevStatus => 
