@@ -4,6 +4,7 @@ import {
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { bricolage } from './fonts';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" >
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${bricolage.className} antialiased`}
         >
           {children}
         </body>

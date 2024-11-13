@@ -7,10 +7,10 @@ import * as React from "react"
 
 const menuItems = [
     { icon: Home, label: "home", color: "#FF6B6B", path: "/dashboard" },
-    { icon: User, label: "tadarus", color: "#4ECDC4", path: "/dashboard/tadarus" },
-    { icon: DollarSign, label: "zakat", color: "#45B7D1", path: "/dashboard/zakat" },
-    { icon: Bell, label: "daily planner", color: "#FFA07A", path: "/dashboard/daily-planner" },
-    { icon: Settings, label: "settings", color: "#98D8C8",  path: "/dashboard/settings" },
+    { icon: User, label: "tadarus", color: "#4ECDC4", path: "/tadarus" },
+    { icon: DollarSign, label: "zakat", color: "#45B7D1", path: "/zakat" },
+    { icon: Bell, label: "daily planner", color: "#FFA07A", path: "/daily-planner" },
+    { icon: Settings, label: "settings", color: "#98D8C8",  path: "/settings" },
 ]
 
 export default function FloatingNav() {

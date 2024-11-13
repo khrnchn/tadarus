@@ -61,7 +61,7 @@ export default function PrayerTimes() {
   return (
     <Card className="w-fit h-fit">
       <CardHeader className="text-center">
-        <CardTitle>welcome to tadarus.my, <span className="text-red-500">{user?.firstName}</span></CardTitle>
+        <CardTitle>welcome to tadarus.my, <span className="text-red-500 underline decoration-wavy">{user?.firstName?.toLowerCase()}</span></CardTitle>
       </CardHeader>
       <div className="p-4 sm:p-6 md:p-8 rounded-lg shadow-lg">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-4 mb-4">
