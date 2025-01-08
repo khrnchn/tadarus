@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Github, Moon, Sun } from "lucide-react";
 import { ModeToggle } from "@/components/theme/mode-toggle";
 
-// Features data
 const features = [
   {
     title: "Track Progress",
@@ -148,9 +147,9 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full border-t py-6 text-center">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Tadarus.my. All rights reserved.
+          &copy; {new Date().getFullYear()} tadarus.my | all rights reserved. | visit <Link href="https://sedekah.je"><span className="text-blue-500 hover:underline">SedekahJe</span></Link>
         </p>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 }

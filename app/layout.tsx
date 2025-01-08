@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "tadarus.my | Your Ramadan Quran Companion",
     description: "Track your Quran reading progress, join group readings, and complete the Quran this Ramadan with tadarus.my.",
-    creator: "@khrnchn"
+    creator: "@sedekahje"
   },
   icons: {
     icon: "/favicon.ico",
