@@ -30,7 +30,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="w-full px-6 py-4 flex justify-between items-center border-b">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">Tadarus.my</span>
+          <span className="text-xl font-bold text-primary">tadarus.my</span>
         </Link>
         <div className="flex items-center gap-4">
           <ModeToggle />
@@ -88,15 +88,18 @@ export default function Home() {
         {/* Community Section */}
         <Card className="mb-16">
           <CardHeader>
-            <CardTitle className="text-2xl">Join Our Growing Community</CardTitle>
+            <CardTitle className="text-2xl">Join Our DevTalk Community</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Connect with fellow Muslims worldwide and support each other in your Quran reading journey.
+              Connect with local tech community and support each other in your Quran reading journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild>
-                <Link href="/community">Join Community</Link>
+                <Link
+                  href="https://devtalk.club/"
+                  target="_blank"
+                  rel="noopener noreferrer">Join Community</Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link
