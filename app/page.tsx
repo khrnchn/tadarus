@@ -1,9 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
+import { ModeToggle } from "@/components/theme/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Github, Moon, Sun } from "lucide-react";
-import { ModeToggle } from "@/components/theme/mode-toggle";
+import { UserButton } from "@clerk/nextjs";
+import { SignedIn } from "@clerk/nextjs";
+import { SignInButton } from "@clerk/nextjs";
+import { SignedOut } from "@clerk/nextjs";
+import { ArrowRight, Github } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   {
@@ -26,21 +29,26 @@ const features = [
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-between bg-background text-foreground">
-      {/* Navigation */}
       <nav className="w-full px-6 py-4 flex justify-between items-center border-b">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold text-primary">tadarus.my</span>
         </Link>
         <div className="flex items-center gap-4">
           <ModeToggle />
-          <Button variant="outline" asChild>
-            <Link href="/login">Login</Link>
-          </Button>
+          <SignedOut>
+            <SignInButton>
+              <Button variant="outline">
+                Login
+              </Button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </nav>
 
       <div className="flex-1 w-full max-w-5xl mx-auto px-6 py-12">
-        {/* Hero Section */}
         <header className="text-center space-y-6 mb-16">
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
@@ -64,7 +72,6 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {features.map((feature, index) => (
             <Card
@@ -84,7 +91,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Community Section */}
         <Card className="mb-16">
           <CardHeader>
             <CardTitle className="text-2xl">Join Our DevTalk Community</CardTitle>
