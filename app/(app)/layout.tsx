@@ -1,12 +1,12 @@
 'use client';
 
-import React from 'react';
-import { UserButton } from "@clerk/nextjs";
 import { ModeToggle } from "@/components/theme/mode-toggle";
-import { Home, Book, Users, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
+import { Book, Home, Trophy, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from 'react';
 
 interface AppLayoutProps {
     children: React.ReactNode;
@@ -44,21 +44,23 @@ const AppLayout = ({ children }: AppLayoutProps) => {
             <Link href={item.href} className="w-full">
                 <Button
                     variant={isActive ? "secondary" : "ghost"}
-                    className={`w-full justify-center ${isMobile
-                        ? 'flex flex-col items-center gap-1 h-16 py-2'
-                        : 'flex gap-2'
-                        } ${isActive
-                            ? 'bg-secondary hover:bg-secondary/80'
-                            : 'hover:bg-accent'
+                    className={`w-full rounded-none justify-center flex flex-col items-center gap-1 h-16 py-2 transition-all duration-200 ${isActive
+                        ? 'bg-card text-primary font-medium scale-105'
+                        : 'hover:bg-accent text-muted-foreground'
                         }`}
                 >
-                    <item.icon className={`${isMobile ? "h-5 w-5" : "h-4 w-4"} ${isActive ? "text-primary" : "text-muted-foreground"
-                        }`} />
-                    <span className={`${isMobile ? "text-xs" : ""} ${isActive ? "text-primary font-medium" : "text-muted-foreground"
-                        }`}>
+                    <item.icon
+                        className={`h-5 w-5 transition-all duration-200 ${isActive ? "text-primary scale-110" : "text-muted-foreground"
+                            }`}
+                    />
+                    <span
+                        className={`text-xs transition-all duration-200 ${isActive ? "text-primary font-semibold" : "text-muted-foreground"
+                            }`}
+                    >
                         {item.name}
                     </span>
                 </Button>
+
             </Link>
         );
     };
