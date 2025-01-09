@@ -3,7 +3,7 @@
 import { ModeToggle } from "@/components/theme/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
-import { Book, Home, Trophy, Users } from "lucide-react";
+import { Book, Home, Trophy, Users, Users2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from 'react';
@@ -27,9 +27,9 @@ const AppLayout = ({ children }: AppLayoutProps) => {
             icon: Book
         },
         {
-            name: "Groups",
-            href: "/groups",
-            icon: Users
+            name: "Group",
+            href: "/group",
+            icon: Users2
         },
         {
             name: "Progress",
@@ -45,7 +45,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
                 <Button
                     variant={isActive ? "secondary" : "ghost"}
                     className={`w-full rounded-none justify-center flex flex-col items-center gap-1 h-16 py-2 transition-all duration-200 ${isActive
-                        ? 'bg-card text-primary font-medium scale-105'
+                        ? 'bg-secondary text-primary font-medium scale-105'
                         : 'hover:bg-accent text-muted-foreground'
                         }`}
                 >
