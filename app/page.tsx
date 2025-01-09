@@ -31,7 +31,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center justify-between bg-background text-foreground">
       <nav className="w-full px-6 py-4 flex justify-between items-center border-b">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">tadarus.my</span>
+          <span className="text-xl font-bold text-primary">tdrsmy</span>
         </Link>
         <div className="flex items-center gap-4">
           <ModeToggle />
@@ -55,19 +55,19 @@ export default function Home() {
               Welcome to <span className="text-primary">tadarus.my</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Your companion for completing the Quran this Ramadan. Join thousands of others
+              Your companion for completing the Quran this Ramadan. Join the others
               in their spiritual journey. 📖 🌙
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" className="group" asChild>
-              <Link href="/signup">
+              <Link href="#">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/learn-more">Learn More</Link>
+              <Link href="#">Learn More</Link>
             </Button>
           </div>
         </header>
@@ -153,7 +153,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full border-t py-6 text-center">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} tadarus.my | all rights reserved. | visit <Link href="https://sedekah.je"><span className="text-blue-500 hover:underline">SedekahJe</span></Link>
+          &copy; {new Date().getFullYear()} tadarus.my | all rights reserved. | visit <Link href="https://sedekah.je" target="_blank" rel="noopener noreferrer"><span className="text-blue-500 hover:underline">SedekahJe</span></Link>
         </p>
       </footer >
     </div >

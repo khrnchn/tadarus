@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png"
   },
-  manifest: "/site.webmanifest",
+  // manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
@@ -69,11 +69,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
   },
   // verification: {
   //   google: "your-google-site-verification-code", // Add your verification code when ready
