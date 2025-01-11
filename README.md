@@ -1,4 +1,10 @@
+<div align="center">
+
 # tadarus.my
+
+![image](https://github.com/user-attachments/assets/cd08e956-4ad2-4d32-95ee-7c65e4fe0e63)
+
+</div>
 
 A Ramadan-focused web app to help users complete the Quran through solo or group recitations. The app distributes daily reading portions, tracks progress, and provides offline access to Quranic text.
 
