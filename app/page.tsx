@@ -7,18 +7,23 @@ import { ModeToggle } from "@/components/theme/mode-toggle";
 
 const features = [
   {
-    title: "Track Progress",
-    description: "Monitor your daily reading progress and set personal goals",
+    title: "Jejak Pergembangan",
+    description: "Simpan jejak perkembangan bacaan al-Quran harian anda",
     icon: "📊"
   },
   {
-    title: "Group Reading",
-    description: "Join or create reading groups for mutual motivation",
+    title: "Tadarus Berkumpulan",
+    description: "Sertai atau cipta kumpulan tadarrus",
     icon: "👥"
   },
   {
-    title: "Offline Access",
-    description: "Access Quranic text even without internet connection",
+    title: "Pantau dan Rekod",
+    description: "Pantau dan rekod perkembangan bacaan al-Quran harian",
+    icon: "👾"
+  },
+  {
+    title: "Akses Luar Talian",
+    description: "Akses al-Quran diluar talian",
     icon: "📱"
   }
 ];
@@ -34,7 +39,7 @@ export default function Home() {
         <div className="flex items-center gap-4">
           <ModeToggle />
           <Button variant="outline" asChild>
-            <Link href="/login">Login</Link>
+            <Link href="/login">Log masuk</Link>
           </Button>
         </div>
       </nav>
@@ -44,22 +49,21 @@ export default function Home() {
         <header className="text-center space-y-6 mb-16">
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-              Welcome to <span className="text-primary">tadarus.my</span>
+              Selamat datang ke <span className="text-primary">tadarus.my</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Your companion for completing the Quran this Ramadan. Join thousands of others
-              in their spiritual journey. 📖 🌙
+              Penaman anda menghabiskan 30 juzuk pada ramadhan ini. 📖 🌙
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" className="group" asChild>
               <Link href="/signup">
-                Get Started
+                Mula Sekarang
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/learn-more">Learn More</Link>
+              <Link href="/learn-more">Lebih Lanjut</Link>
             </Button>
           </div>
         </header>
@@ -87,18 +91,19 @@ export default function Home() {
         {/* Community Section */}
         <Card className="mb-16">
           <CardHeader>
-            <CardTitle className="text-2xl">Join Our DevTalk Community</CardTitle>
+            <CardTitle className="text-2xl">Sertai Komunity Old Money (DevTalk)</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Connect with local tech community and support each other in your Quran reading journey.
+            
+              Merapatkan diri dengan komuniti tech tempatan dan sokong bacaan al Quran antara satu sama lain.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild>
                 <Link
                   href="https://devtalk.club/"
                   target="_blank"
-                  rel="noopener noreferrer">Join Community</Link>
+                  rel="noopener noreferrer">Sertai Komuniti</Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link
@@ -108,7 +113,7 @@ export default function Home() {
                   className="flex items-center gap-2"
                 >
                   <Github className="h-5 w-5" />
-                  <span>Star on GitHub</span>
+                  <span>Berikan Bintang di GitHub</span>
                 </Link>
               </Button>
             </div>
