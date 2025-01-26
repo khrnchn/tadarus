@@ -1,9 +1,6 @@
-import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { db } from "@/db"; // your drizzle instance
+import NextAuth from "next-auth"
+import Google from "next-auth/providers/google"
  
-export const auth = betterAuth({
-    database: drizzleAdapter(db, {
-        provider: "pg", // or "mysql", "sqlite"
-    })
-});
+export const { handlers, signIn, signOut, auth } = NextAuth({
+  providers: [Google],
+})

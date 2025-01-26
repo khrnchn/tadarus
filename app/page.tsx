@@ -1,9 +1,10 @@
-import Image from "next/image";
+"use client"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Github, Moon, Sun } from "lucide-react";
 import { ModeToggle } from "@/components/theme/mode-toggle";
+import { handleSignIn } from "./_lib/actions";
 
 const features = [
   {
@@ -38,8 +39,10 @@ export default function Home() {
         </Link>
         <div className="flex items-center gap-4">
           <ModeToggle />
-          <Button variant="outline" asChild>
-            <Link href="/login">Log masuk</Link>
+          <Button variant="outline" onClick={async () => {
+            await handleSignIn()
+          }}>
+            Log masuk
           </Button>
         </div>
       </nav>
@@ -56,11 +59,13 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="group" asChild>
-              <Link href="/signup">
-                Mula Sekarang
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+            <Button size="lg" className="group" onClick={async () => {
+              await handleSignIn()
+            }}>
+
+              Mula Sekarang
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/learn-more">Lebih Lanjut</Link>
@@ -95,7 +100,7 @@ export default function Home() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-            
+
               Merapatkan diri dengan komuniti tech tempatan dan sokong bacaan al Quran antara satu sama lain.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
